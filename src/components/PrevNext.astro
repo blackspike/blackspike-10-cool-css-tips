@@ -1,0 +1,30 @@
+---
+
+import { getCollection } from "astro:content"
+
+let posts = (await getCollection("slides")).sort((a, b) => a.data.order - b.data.order)
+
+const index = posts.findIndex((post) => {
+  return Astro.request.url.includes(post.slug)
+})
+const nextPost = posts[index + 1]
+const prevPost = posts[index - 1]
+---
+
+<nav class="prev-next grid grid-flow-col gap-3">
+  {
+    prevPost && (
+      <a class="btn text-bs-foreground-light" href={`/slides/${prevPost.slug}/`} aria-label="Previous slide">Prev</a>
+    )
+  }
+
+  {
+    nextPost && (
+    <a class="btn text-bs-foreground-light" href={`/slides/${nextPost.slug}/`} aria-label="Next slide">Next</a>
+    )
+  }
+</nav>
+
+<style  scoped>
+
+</style>
