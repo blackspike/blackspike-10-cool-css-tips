@@ -6,20 +6,13 @@ image: '../../assets/images/code-quote-scroll.png'
 ---
 import { Image } from 'astro:assets';
 import screen from '../../assets/images/code-quote-scroll.png'
+import VideoPlayer from '../../components/VideoPlayer.astro'
 
 Just wrap words in `<strong>` tags to mark them for animation
 
-<video
-  class="rounded-xl absolute z-0 w-[540px] right-[200px] top-[20px] hover:z-10"
-  autoplay
-  loop
-  muted
-  playsinline
-  poster="/videos/video-quote-scroll.optim.avif"
-  width="486"
->
-  <source src="/videos/video-quote-scroll.optim.mp4" type="video/mp4" />
-  <source src="/videos/video-quote-scroll.optim.webm" type="video/webm" />
-</video>
+<VideoPlayer
+  classes="w-[540px] right-[200px] top-[20px]"
+  name="quote-scroll"
+/>
 
 <Image src={screen} alt="" class="rounded-xl absolute z-1 w-[340px] right-[20px] top-[140px] hover:z-10" />

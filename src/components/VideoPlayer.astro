@@ -1,0 +1,15 @@
+---
+const { classes, name } = Astro.props
+---
+
+<video
+  class:list={["rounded-xl absolute z-0 hover:z-10", classes]}
+  autoplay
+  loop
+  muted
+  playsinline
+  poster={`/videos/video-${name}.optim.avif`}
+>
+  <source src={`/videos/video-${name}.optim.mp4`} type="video/mp4" />
+  <source src={`/videos/video-${name}.optim.webm`} type="video/webm" />
+</video>

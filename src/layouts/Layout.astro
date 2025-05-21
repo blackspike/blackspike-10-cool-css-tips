@@ -7,31 +7,29 @@ import "../assets/css/buttons.css"
 import Logo from '../assets/blackspike-logo.svg'
 import { Font } from 'astro:assets';
 import { ClientRouter } from "astro:transitions";
-// import Image from "astro/components/Image.astro"
-// import bg_image from "../assets/theme-images/hero-image.jpg"
 import PrevNext from "../components/PrevNext.astro"
 
 const { title, description, image } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en" class="bg-gray-200 flex items-center justify-center h-dvh w-full">
+<html lang="en" class="bg-bs-surface-0 flex items-center justify-center h-dvh w-full">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title ? title : 'videeeooo'}</title>
+    <title>blackspike - { title ? title : '10 cool modern css tips' }</title>
 
     <meta name="description" content={ description } />
     <meta name="theme-color" content="#eee" />
 
-    <meta property="og:title" content={ title } />
+    <meta property="og:title" content={ title ? title : '10 cool modern css tips' } />
     <meta property="og:description" content={ description } />
+    <meta property="og:url" content="https://css-tips.blackspike.com">
     <meta
       property="og:image"
-      content={ image }
+      content={ image ? image : "https://css-tips.blackspike.com/1200x630.jpg"}
     />
-
 
     <Font cssVariable="--font-inter" preload />
     <Font cssVariable="--font-inter-display" preload />
@@ -48,7 +46,7 @@ const { title, description, image } = Astro.props
       <PrevNext />
     </div>
 
-    <a class="absolute top-10 left-10" href="/"><Logo height="48" /></a>
+    <a class="absolute top-10 left-10" href="https://www.blackspike.com"><Logo height="48" /></a>
 
   </body>
 </html>

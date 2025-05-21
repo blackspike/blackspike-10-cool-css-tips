@@ -7,20 +7,13 @@ image: '../../assets/images/code-animated-accordion.png'
 
 import { Image } from 'astro:assets';
 import screen from '../../assets/images/code-animated-accordion.png'
+import VideoPlayer from '../../components/VideoPlayer.astro'
 
 Using `<details>` and `<summary>` – no js!
 
-<video
-  class="rounded-xl absolute z-0 w-[540px] right-[160px] top-[20px] hover:z-10"
-  autoplay
-  loop
-  muted
-  playsinline
-  poster="/videos/video-animated-accordion.avif"
-  width="1420"
->
-  <source src="/videos/video-animated-accordion.mp4" type="video/mp4" />
-  <source src="/videos/video-animated-accordion.webm" type="video/webm" />
-</video>
+<VideoPlayer
+  classes="w-[540px] right-[160px] top-[20px]"
+  name="animated-accordion"
+/>
 
 <Image src={screen} alt="" class="rounded-xl absolute z-1 w-[440px] right-[20px] top-[60px] hover:z-10" />

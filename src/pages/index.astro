@@ -3,10 +3,13 @@ import Layout from '../layouts/Layout.astro';
 import SlideContent from "../components/SlideContent.astro"
 
 const content = {
-	title: "<span>10</span> Cool CSS & HTML <span>Features</span>",
+	title: "<span>10</span> Cool CSS & HTML <span>tips</span>",
 	description: "Using tailwind & vanilla CSS",
 	order: 1
 }
+// image: '../assets/images/hero-image.png'
+import { Image } from 'astro:assets';
+import screen from '../assets/images/hero-image.png'
 ---
 
 <Layout title={content.title} description={content.description}>
@@ -14,6 +17,11 @@ const content = {
   <SlideContent
     title={content.title}
     description={content.description}
-  />
+  >
+
+<Fragment slot="content">
+    <Image src={screen} alt="" class="absolute z-1 w-[780px] right-[40px] top-[20px] hover:z-10 " />
+  </Fragment>
+</SlideContent>
 
 </Layout>

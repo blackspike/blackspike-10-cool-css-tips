@@ -5,13 +5,13 @@
   --font-display: var(--font-inter-display), "ui-sans-serif", "system-ui", "sans-serif";
   --font-body: var(--font-inter), "ui-sans-serif", "system-ui", "sans-serif";
 
-  --color-bs-surface-0: #eee;
-  --color-bs-surface-1: #18181B;
+  --color-bs-surface-0: #18181B;
+  --color-bs-surface-1: #1e1e1e;
   --color-bs-surface-2: rgba(255, 255, 255, 0.03);
   --color-bs-surface-3: #2F2F31;
 
   --color-bs-foreground-light: #999;
-  --color-bs-foreground-dark: #18181B;
+  --color-bs-foreground-dark: #666;
 
   --color-current: currentColor;
 

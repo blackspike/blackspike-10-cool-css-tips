@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+# blackspike 10 modern css tips
 
 ```sh
 ## 🧞 Commands

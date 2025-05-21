@@ -1,6 +1,7 @@
 ---
 
 import { getCollection } from "astro:content"
+import Arrow from '../assets/images/icon-arrow.svg'
 
 let posts = (await getCollection("slides")).sort((a, b) => a.data.order - b.data.order)
 
@@ -11,18 +12,30 @@ const nextPost = posts[index + 1]
 const prevPost = posts[index - 1]
 ---
 
-<nav class="prev-next grid grid-flow-col gap-3 select-none">
-  <a
-    class:list={["btn text-bs-foreground-dark", {"opacity-40 pointer-events-none" : !prevPost}]}
-    href={prevPost?.slug ? `/slides/${prevPost.slug}/` : '/#'}>
-    Prev
-  </a>
-  <a
-    class:list={["btn text-bs-foreground-dark", {"opacity-40 pointer-events-none" : !nextPost}]}
-    href={nextPost?.slug ? `/slides/${nextPost.slug}/` : '/#'}>
-    Next
-  </a>
-</nav>
+<nav class="prev-next select-none font-semibold flex justify-center gap-3">
+
+      <!-- Prev -->
+      <a
+        href={prevPost?.slug ? `/slides/${prevPost.slug}/` : '/'}
+        aria-label="Previous slide"
+        class="bs-btn group !p-0 flex items-center justify-center h-10 w-10 md:h-12 md:w-12"
+        >
+
+        <Arrow class="opacity-60 h-4 w-4 -translate-x-[2px] group-active:translate-y-[1px]" height="16" width="25" />
+
+      </a>
+
+      <!-- Next -->
+      <a
+        href={nextPost?.slug ? `/slides/${nextPost.slug}/` : '/'}
+        aria-label="Next slide"
+        class="bs-btn !p-0 flex items-center justify-center h-10 w-10 md:h-12 md:w-12 -scale-x-100"
+        >
+
+        <Arrow class="opacity-60 h-4 w-4 -translate-x-[2px] group-active:translate-y-[1px]" height="16" width="25" />
+
+      </a>
+    </nav>
 
 <style  scoped>
 

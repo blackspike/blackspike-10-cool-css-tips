@@ -7,20 +7,13 @@ image: '../../assets/images/code-exclusive-accordion.png'
 
 import { Image } from 'astro:assets';
 import screen from '../../assets/images/code-exclusive-accordion.png'
+import VideoPlayer from '../../components/VideoPlayer.astro'
 
 Just use the same name attribute for each!
 
-<video
-  class="rounded-xl absolute z-0 w-[500px] right-[200px] top-[20px] hover:z-10"
-  autoplay
-  loop
-  muted
-  playsinline
-  poster="/videos/video-exclusive-accordion.optim.avif"
-  width="486"
->
-  <source src="/videos/video-exclusive-accordion.optim.mp4" type="video/mp4" />
-  <source src="/videos/video-exclusive-accordion.optim.webm" type="video/webm" />
-</video>
+<VideoPlayer
+  classes="w-[500px] right-[200px] top-[20px]"
+  name="exclusive-accordion"
+/>
 
 <Image src={screen} alt="" class="absolute z-1 w-[300px] right-[20px] top-[240px] hover:z-10" />

@@ -6,20 +6,13 @@ image: '../../assets/images/code-container-queries.png'
 ---
 import { Image } from 'astro:assets';
 import screen from '../../assets/images/code-container-queries.png'
+import VideoPlayer from '../../components/VideoPlayer.astro'
 
 Zero media queries needed!
 
-<video
-  class="rounded-xl absolute z-0 w-[440px] right-[20px] top-[20px] hover:z-10"
-  autoplay
-  loop
-  muted
-  playsinline
-  poster="/videos/video-container-queries.optim.avif"
-  width="486"
->
-  <source src="/videos/video-container-queries.optim.mp4" type="video/mp4" />
-  <source src="/videos/video-container-queries.optim.webm" type="video/webm" />
-</video>
+<VideoPlayer
+  classes="w-[440px] right-[20px] top-[20px]"
+  name="container-queries"
+/>
 
 <Image src={screen} alt="" class="rounded-xl absolute z-1 w-[380px] right-[380px] top-[140px] hover:z-10" />

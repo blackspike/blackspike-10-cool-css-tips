@@ -7,18 +7,11 @@ image: '../../assets/images/code-animated-dialog.png'
 
 import { Image } from 'astro:assets';
 import screen from '../../assets/images/code-animated-dialog.png'
+import VideoPlayer from '../../components/VideoPlayer.astro'
 
-<video
-  class="rounded-xl absolute z-0 w-[460px] right-[300px] top-[20px] hover:z-10"
-  autoplay
-  loop
-  muted
-  playsinline
-  poster="/videos/video-animated-dialog.optim.avif"
-  width="486"
->
-  <source src="/videos/video-animated-dialog.optim.mp4" type="video/mp4" />
-  <source src="/videos/video-animated-dialog.optim.webm" type="video/webm" />
-</video>
+<VideoPlayer
+  classes=" w-[460px] right-[300px] top-[20px]"
+  name="animated-dialog"
+/>
 
-<Image src={screen} alt="" class="rounded-xl absolute z-1 w-[380px] right-[20px] top-[40px] hover:z-10" />
+<Image src={screen} alt="" class="rounded-xl absolute z-1 w-[420px] right-[20px] top-[60px] hover:z-10" />

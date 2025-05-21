@@ -7,5 +7,5 @@
 }
 
 body {
-  @apply bg-bs-surface-0 text-bs-foreground-dark font-body selection:text-black selection:bg-amber-300;
+  @apply bg-bs-surface-1 text-bs-foreground-light font-body selection:text-black selection:bg-amber-300;
 }

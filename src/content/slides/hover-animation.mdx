@@ -6,19 +6,12 @@ image: '../../assets/images/code-hover-btn.png'
 ---
 import { Image } from 'astro:assets';
 import screen from '../../assets/images/code-hover-btn.png'
+import VideoPlayer from '../../components/VideoPlayer.astro'
 
-<video
-  class="rounded-xl absolute z-0 w-[320px] right-[340px] top-[120px] hover:z-10"
-  autoplay
-  loop
-  muted
-  playsinline
-  poster="/videos/video-hover-btn.optim.avif"
-  width="486"
->
-  <source src="/videos/video-hover-btn.optim.mp4" type="video/mp4" />
-  <source src="/videos/video-hover-btn.optim.webm" type="video/webm" />
-</video>
+<VideoPlayer
+  classes="w-[320px] right-[340px] top-[120px]"
+  name="hover-btn"
+/>
 
-<Image src={screen} alt="" class="rounded-xl absolute z-1 w-[240px] right-[40px] -top-[50px] hover:z-10" />
+<Image src={screen} alt="" class="rounded-xl absolute z-1 w-[290px] -right-[40px] -top-[55px] hover:z-10" />
 

@@ -27,10 +27,10 @@ const customTransition = {
 }
 
 {
- description && <p class="bs-body-text mt-2 relative z-30" set:html={description} />
+ description && <p class="bs-body-text relative z-30" set:html={description} />
 }
 
-<div class="content text-lg text-gray-600 mt-1 text-balance"><slot name="content" /></div>
+<div class="content text-lg text-bs-foreground-dark mt-1 text-balance"><slot name="content" /></div>
 
 </section>
 
@@ -64,7 +64,7 @@ const customTransition = {
 }
 
 h1 { @apply bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text min-h-[1.1lh] text-transparent}
-h1 span { @apply  bg-bs-foreground-dark bg-clip-text }
+h1 span { @apply  bg-bs-foreground-light bg-clip-text }
 
 .content { @apply [&_a]:text-sky-500 font-semibold }
 .content:empty { display: none;}
@@ -101,6 +101,6 @@ h1 span { @apply  bg-bs-foreground-dark bg-clip-text }
   animation-iteration-count: once;
   animation-fill-mode: forwards;
   animation-timing-function: var(--ease-bs-spring);
-  animation-delay: 4s;
+  animation-delay: 2s;
 }
 </style>

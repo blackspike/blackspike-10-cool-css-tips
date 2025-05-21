@@ -6,20 +6,13 @@ image: '../../assets/images/code-drop-shadow.png'
 ---
 import { Image } from 'astro:assets';
 import screen from '../../assets/images/code-drop-shadow.png'
+import VideoPlayer from '../../components/VideoPlayer.astro'
 
 Add Tailwind’s `transform-gpu` or `translate3d(0,0,0)` to fix Safari's clip bug
 
-<video
-  class="rounded-xl absolute z-0 w-[500px] right-[40px] top-[20px] hover:z-10"
-  autoplay
-  loop
-  muted
-  playsinline
-  poster="/videos/video-drop-shadow.optim.avif"
-  width="486"
->
-  <source src="/videos/video-drop-shadow.optim.mp4" type="video/mp4" />
-  <source src="/videos/video-drop-shadow.optim.webm" type="video/webm" />
-</video>
+<VideoPlayer
+  classes="w-[500px] right-[40px] top-[20px]"
+  name="drop-shadow"
+/>
 
 <Image src={screen} alt="" class="rounded-xl absolute z-1 w-[280px] right-[20px] top-[100px] hover:z-10" />
