@@ -1,5 +1,7 @@
 # blackspike 10 modern css tips
 
+Video music by <a href="https://dig.ccmixter.org/files/andrewbowden/33629">Out of It (Rambling Man Remixes)</a> by andrewbowden (c) copyright 2011 Licensed under a Creative Commons <a href="http://creativecommons.org/licenses/by-nc/3.0/">Attribution Noncommercial  (3.0)</a> license. Ft: Brad Sucks
+
 ```sh
 ## 🧞 Commands
 

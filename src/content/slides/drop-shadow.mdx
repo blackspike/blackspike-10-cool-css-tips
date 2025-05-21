@@ -2,8 +2,8 @@
 title: drop-shadow
 description: "To give irregular shaped images tight shadows."
 order: 6
-image: '../../assets/images/code-drop-shadow.png'
 ---
+
 import { Image } from 'astro:assets';
 import screen from '../../assets/images/code-drop-shadow.png'
 import VideoPlayer from '../../components/VideoPlayer.astro'
@@ -15,4 +15,8 @@ Add Tailwind’s `transform-gpu` or `translate3d(0,0,0)` to fix Safari's clip bu
   name="drop-shadow"
 />
 
-<Image src={screen} alt="" class="rounded-xl absolute z-1 w-[280px] right-[20px] top-[100px] hover:z-10" />
+<Image
+  src={screen}
+  alt="code screenshot, see the source code in the github footer link"
+  class="rounded-xl absolute z-1 w-[280px] right-[20px] top-[100px] hover:z-10"
+/>

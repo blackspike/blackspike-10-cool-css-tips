@@ -11,35 +11,36 @@ const anim = {
     duration: ".7s",
     easing: "var(--ease-bs-spring)",
   },
-};
+}
 
 const customTransition = {
   forwards: anim,
   backwards: anim,
-};
+}
 ---
 
-<section >
+<section>
 
+  {
+    title && <h1 class="bs-h1 relative z-30" set:html={ title } transition:animate={ customTransition } />
+  }
 
-{
- title && <h1 class="bs-h1 relative z-30" set:html={title} transition:animate={customTransition} />
-}
+  {
+    description && <p class="description bs-body-text relative z-30" set:html={ description } />
+  }
 
-{
- description && <p class="bs-body-text relative z-30" set:html={description} />
-}
+  <div class="content text-lg text-bs-foreground-dark mt-1 text-balance">
 
-<div class="content text-lg text-bs-foreground-dark mt-1 text-balance"><slot name="content" /></div>
+    <slot name="content" />
+
+  </div>
 
 </section>
-
 
 <style is:global>
 
 @import "tailwindcss";
 @reference "../assets/css/global.css";
-
 
 @keyframes bump-in {
   0% {
@@ -63,26 +64,30 @@ const customTransition = {
   }
 }
 
-h1 { @apply bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text min-h-[1.1lh] text-transparent}
-h1 span { @apply  bg-bs-foreground-light bg-clip-text }
+h1 {
+  @apply bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text min-h-[1.1lh] text-transparent
+}
 
+.description,
 .content { @apply [&_a]:text-sky-500 font-semibold }
+
 .content:empty { display: none;}
 
 .content pre,
-.content code {
-  @apply text-violet-500 font-semibold text-sm
-}
+.content code { @apply text-violet-500 font-semibold text-sm }
 
 @keyframes fade-in {
+
   0% {
     opacity: 0;
     translate: 0 200px
   }
+
   100% {
     opacity: 1;
     translate: 0 0
   }
+
 }
 
 .content video {

@@ -4,27 +4,36 @@ import "../assets/css/base.css"
 import "../assets/css/typography.css"
 import "../assets/css/layout.css"
 import "../assets/css/buttons.css"
+
+import { Font } from 'astro:assets'
+import { ClientRouter } from "astro:transitions"
+
 import Logo from '../assets/blackspike-logo.svg'
-import { Font } from 'astro:assets';
-import { ClientRouter } from "astro:transitions";
 import PrevNext from "../components/PrevNext.astro"
 
 const { title, description, image } = Astro.props
+
+const stripHTMLTags = str => str.replace(/<[^>]*>/g, '')
+const titleNoHtml = stripHTMLTags(title)
+const descNoHtml = stripHTMLTags(description)
 ---
 
 <!doctype html>
-<html lang="en" class="bg-bs-surface-0 flex items-center justify-center h-dvh w-full">
+<html lang="en" class="bg-bs-surface-0 relative flex items-center justify-center h-dvh w-full">
   <head>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>blackspike - { title ? title : '10 cool modern css tips' }</title>
 
-    <meta name="description" content={ description } />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>blackspike - { titleNoHtml ? titleNoHtml : '10 cool modern css tips' }</title>
+
+    <meta name="description" content={ descNoHtml } />
     <meta name="theme-color" content="#eee" />
 
-    <meta property="og:title" content={ title ? title : '10 cool modern css tips' } />
-    <meta property="og:description" content={ description } />
+    <meta property="og:title" content={ titleNoHtml ? titleNoHtml : '10 cool modern css tips' } />
+    <meta property="og:description" content={ descNoHtml } />
     <meta property="og:url" content="https://css-tips.blackspike.com">
     <meta
       property="og:image"
@@ -38,15 +47,39 @@ const { title, description, image } = Astro.props
 
   </head>
 
-  <body class="group w-[960px] h-[540px] overflow-hidden relative">
+  <body class="group relative">
 
-    <main class="overflow-hidden h-full w-full relative grid items-end p-10"><slot /></main>
+    <!-- Main -->
+    <main class="overflow-hidden w-[960px] h-[540px] z-10 isolate relative grid items-end p-10 bg-bs-surface-1">
+      <slot />
+    </main>
 
-    <div class="absolute bottom-10 right-10 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-400">
+    <!-- Nav -->
+    <div class="absolute bottom-10 right-10 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-400">
       <PrevNext />
     </div>
 
-    <a class="absolute top-10 left-10" href="https://www.blackspike.com"><Logo height="48" /></a>
+    <!-- Logo -->
+    <a class="absolute top-10 left-10 z-20" href="/">
+      <Logo height="48" />
+    </a>
+
+    <!-- Footer -->
+    <footer class="font-semibold text-sm fixed bottom-10 right-10 z-0 flex gap-3 flex-wrap [&_a]:hover:text-sky-500">
+
+      <a href="https://astro-theme.blackspike.com/">
+        live demo
+      </a>
+
+      <a href="https://github.com/blackspike/blackspike-astro-landing-page">
+        github
+      </a>
+
+      <a href="https://www.blackspike.com/blog/blackspike-free-astro-tailwind-theme/">
+        by blackspike.com
+      </a>
+
+    </footer>
 
     <script>
       // Auto mode

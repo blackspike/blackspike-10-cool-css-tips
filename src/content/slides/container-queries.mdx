@@ -2,8 +2,8 @@
 title: container queries
 description: "These cards are the same component"
 order: 7
-image: '../../assets/images/code-container-queries.png'
 ---
+
 import { Image } from 'astro:assets';
 import screen from '../../assets/images/code-container-queries.png'
 import VideoPlayer from '../../components/VideoPlayer.astro'
@@ -15,4 +15,8 @@ Zero media queries needed!
   name="container-queries"
 />
 
-<Image src={screen} alt="" class="rounded-xl absolute z-1 w-[380px] right-[380px] top-[140px] hover:z-10" />
+<Image
+  src={screen}
+  alt="code screenshot, see the source code in the github footer link"
+  class="rounded-xl absolute z-1 w-[380px] right-[380px] top-[140px] hover:z-10"
+/>

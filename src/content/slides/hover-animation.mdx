@@ -2,8 +2,8 @@
 title: hover animation
 description: "Fun hover effect in only, er 30 classes"
 order: 9
-image: '../../assets/images/code-hover-btn.png'
 ---
+
 import { Image } from 'astro:assets';
 import screen from '../../assets/images/code-hover-btn.png'
 import VideoPlayer from '../../components/VideoPlayer.astro'
@@ -13,5 +13,9 @@ import VideoPlayer from '../../components/VideoPlayer.astro'
   name="hover-btn"
 />
 
-<Image src={screen} alt="" class="rounded-xl absolute z-1 w-[290px] -right-[40px] -top-[55px] hover:z-10" />
+<Image
+  src={screen}
+  alt="code screenshot, see the source code in the github footer link"
+  class="rounded-xl absolute z-1 w-[290px] -right-[40px] -top-[55px] hover:z-10"
+/>
 

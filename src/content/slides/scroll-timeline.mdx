@@ -2,8 +2,8 @@
 title: scroll-timeline
 description: "Used to make text animate white when scrolling into view"
 order: 10
-image: '../../assets/images/code-quote-scroll.png'
 ---
+
 import { Image } from 'astro:assets';
 import screen from '../../assets/images/code-quote-scroll.png'
 import VideoPlayer from '../../components/VideoPlayer.astro'
@@ -15,4 +15,8 @@ Just wrap words in `<strong>` tags to mark them for animation
   name="quote-scroll"
 />
 
-<Image src={screen} alt="" class="rounded-xl absolute z-1 w-[340px] right-[20px] top-[140px] hover:z-10" />
+<Image
+  src={screen}
+  alt="code screenshot, see the source code in the github footer link"
+  class="rounded-xl absolute z-1 w-[340px] right-[20px] top-[140px] hover:z-10"
+/>
