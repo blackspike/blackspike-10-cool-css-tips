@@ -49,23 +49,36 @@ const descNoHtml = stripHTMLTags(description)
 
   <body class="group relative">
 
+    <!-- Apology -->
+     <aside class="sr-only">
+      <h2>A11Y Apology</h2>
+      <p>Hi! This is website is more of a little tool that's basically like a slideshow, each slide with a demo of a css technique with a short video clip and a code sample screenshot, not very accessible! It's made to be screen-recorded rather than consumed.</p>
+      <p>If you're finding this difficult to read, please check out the source code and the blog post <a href="#footer">linked to in the footer</a></p>
+     </aside>
+
     <!-- Main -->
     <main class="overflow-hidden w-[960px] h-[540px] z-10 isolate relative grid items-end p-10 bg-bs-surface-1">
+
       <slot />
+
     </main>
 
     <!-- Nav -->
     <div class="absolute bottom-10 right-10 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-400">
+
       <PrevNext />
+
     </div>
 
     <!-- Logo -->
     <a class="absolute top-10 left-10 z-20" href="/">
+
       <Logo height="48" />
+
     </a>
 
     <!-- Footer -->
-    <footer class="font-semibold text-sm fixed bottom-10 right-10 z-0 flex gap-3 flex-wrap [&_a]:hover:text-sky-500">
+    <footer class="font-semibold text-sm fixed bottom-10 right-10 z-0 flex gap-3 flex-wrap [&_a]:hover:text-sky-500" id="footer">
 
       <a href="https://astro-theme.blackspike.com/">
         live demo
