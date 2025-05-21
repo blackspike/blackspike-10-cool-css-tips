@@ -11,18 +11,17 @@ const nextPost = posts[index + 1]
 const prevPost = posts[index - 1]
 ---
 
-<nav class="prev-next grid grid-flow-col gap-3">
-  {
-    prevPost && (
-      <a class="btn text-bs-foreground-light" href={`/slides/${prevPost.slug}/`} aria-label="Previous slide">Prev</a>
-    )
-  }
-
-  {
-    nextPost && (
-    <a class="btn text-bs-foreground-light" href={`/slides/${nextPost.slug}/`} aria-label="Next slide">Next</a>
-    )
-  }
+<nav class="prev-next grid grid-flow-col gap-3 select-none">
+  <a
+    class:list={["btn text-bs-foreground-dark", {"opacity-40 pointer-events-none" : !prevPost}]}
+    href={prevPost?.slug ? `/slides/${prevPost.slug}/` : '/#'}>
+    Prev
+  </a>
+  <a
+    class:list={["btn text-bs-foreground-dark", {"opacity-40 pointer-events-none" : !nextPost}]}
+    href={nextPost?.slug ? `/slides/${nextPost.slug}/` : '/#'}>
+    Next
+  </a>
 </nav>
 
 <style  scoped>

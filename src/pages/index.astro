@@ -1,8 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import SlideContent from "../components/SlideContent.astro"
 
+const content = {
+	title: "<span>10</span> Cool CSS & HTML <span>Features</span>",
+	description: "Using tailwind & vanilla CSS",
+	order: 1
+}
 ---
 
-<Layout>
-	<h1 class="h1"><a href="/page-2">yo</a></h1>
+<Layout title={content.title} description={content.description}>
+
+  <SlideContent
+    title={content.title}
+    description={content.description}
+  />
+
 </Layout>

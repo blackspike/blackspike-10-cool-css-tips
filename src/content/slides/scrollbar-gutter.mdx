@@ -1,0 +1,26 @@
+---
+title: scrollbar-gutter
+description: Prevent layout shift
+order: 5
+image: '../../assets/images/code-scrollbar-gutter.png'
+---
+
+import { Image } from 'astro:assets';
+import screen from '../../assets/images/code-scrollbar-gutter.png'
+
+Ideal for when a dialog is open with `overflow: hidden` on the body
+
+<video
+  class="rounded-xl absolute z-0 w-[560px] right-[30px] top-[20px] hover:z-10"
+  autoplay
+  loop
+  muted
+  playsinline
+  poster="/videos/video-scrollbar-gutter.optim.avif"
+  width="486"
+>
+  <source src="/videos/video-scrollbar-gutter.optim.mp4" type="video/mp4" />
+  <source src="/videos/video-scrollbar-gutter.optim.webm" type="video/webm" />
+</video>
+
+<Image src={screen} alt="" class="rounded-xl absolute z-1 w-[280px] right-[20px] top-[300px] hover:z-10" />

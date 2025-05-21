@@ -11,29 +11,44 @@ import { ClientRouter } from "astro:transitions";
 // import bg_image from "../assets/theme-images/hero-image.jpg"
 import PrevNext from "../components/PrevNext.astro"
 
-
-const { title, description } = Astro.props
+const { title, description, image } = Astro.props
 ---
 
 <!doctype html>
 <html lang="en" class="bg-gray-200 flex items-center justify-center h-dvh w-full">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{title ? title : 'videeeooo'}</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title ? title : 'videeeooo'}</title>
+
+    <meta name="description" content={ description } />
+    <meta name="theme-color" content="#eee" />
+
+    <meta property="og:title" content={ title } />
+    <meta property="og:description" content={ description } />
+    <meta
+      property="og:image"
+      content={ image }
+    />
+
+
+    <Font cssVariable="--font-inter" preload />
+    <Font cssVariable="--font-inter-display" preload />
+
     <ClientRouter />
-		<Font cssVariable="--font-inter" preload />
-		<Font cssVariable="--font-inter-display" preload />
-	</head>
-	<body class="group w-[960px] h-[540px] bg-white relative grid items-end p-10">
 
-		<slot />
+  </head>
 
-		<div class="absolute bottom-10 right-10 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-400">
-			<PrevNext />
-		</div>
+  <body class="group w-[960px] h-[540px] overflow-hidden relative">
 
-		<a class="absolute top-10 left-10" href="/"><Logo fill="red" height="48" /></a>
-	</body>
+    <main class="overflow-hidden h-full w-full relative grid items-end p-10"><slot /></main>
+
+    <div class="absolute bottom-10 right-10 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-400">
+      <PrevNext />
+    </div>
+
+    <a class="absolute top-10 left-10" href="/"><Logo height="48" /></a>
+
+  </body>
 </html>

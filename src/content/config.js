@@ -3,8 +3,9 @@ export const collections = {
   slides: defineCollection({
     schema: z.object({
       title: z.string(),
-      subtitle: z.string().optional(),
       notes: z.string().optional(),
+      image: z.string().optional(),
+      video: z.object().optional(),
       description: z.string().optional(),
       order: z.number(),
     }),

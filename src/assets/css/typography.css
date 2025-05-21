@@ -6,7 +6,7 @@
 }
 
 .bs-h2 {
-  @apply font-display font-semibold text-balance text-3xl md:text-4xl tracking-tight text-bs-foreground-light;
+  @apply font-display font-semibold text-balance text-3xl md:text-4xl tracking-tight;
 }
 
 .bs-h3 {
