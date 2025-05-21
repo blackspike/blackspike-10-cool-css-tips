@@ -17,7 +17,6 @@ const pages = defineCollection({
     title: z.string(),
     image: z.string().optional(),
     description: z.string().optional(),
-    order: z.number(),
   }),
 })
 
