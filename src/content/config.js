@@ -4,7 +4,6 @@ export const collections = {
     schema: z.object({
       title: z.string(),
       image: z.string().optional(),
-      video: z.object().optional(),
       description: z.string().optional(),
       order: z.number(),
     }),

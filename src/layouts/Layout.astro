@@ -8,6 +8,8 @@ import "../assets/css/buttons.css"
 import { Font } from 'astro:assets'
 import { ClientRouter } from "astro:transitions"
 
+import settings from "../content/meta/settings.json"
+
 import Logo from '../assets/blackspike-logo.svg'
 import PrevNext from "../components/PrevNext.astro"
 
@@ -27,17 +29,17 @@ const descNoHtml = stripHTMLTags(description)
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <title>blackspike - { titleNoHtml ? titleNoHtml : '10 cool modern css tips' }</title>
+    <title>{ settings.title } - { titleNoHtml ? titleNoHtml : '10 cool modern css tips' }</title>
 
     <meta name="description" content={ descNoHtml } />
     <meta name="theme-color" content="#eee" />
 
     <meta property="og:title" content={ titleNoHtml ? titleNoHtml : '10 cool modern css tips' } />
     <meta property="og:description" content={ descNoHtml } />
-    <meta property="og:url" content="https://css-tips.blackspike.com">
+    <meta property="og:url" content={ settings.url }>
     <meta
       property="og:image"
-      content={ image ? image : "https://css-tips.blackspike.com/1200x630.jpg"}
+      content={ image ? image : settings.url + "/1200x630.jpg"}
     />
 
     <Font cssVariable="--font-inter" preload />
@@ -80,17 +82,7 @@ const descNoHtml = stripHTMLTags(description)
     <!-- Footer -->
     <footer class="font-semibold text-sm fixed bottom-10 right-10 z-0 flex gap-3 flex-wrap [&_a]:hover:text-sky-500" id="footer">
 
-      <a href="https://astro-theme.blackspike.com/">
-        live demo
-      </a>
-
-      <a href="https://github.com/blackspike/blackspike-astro-landing-page">
-        github
-      </a>
-
-      <a href="https://www.blackspike.com/blog/blackspike-free-astro-tailwind-theme/">
-        by blackspike.com
-      </a>
+      { settings.footer_links.map( item => <a href={ item.link }> { item.title } </a> ) }
 
     </footer>
 

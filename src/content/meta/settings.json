@@ -1,0 +1,42 @@
+{
+  "title": "blackspike",
+  "description": "A blackspike project",
+  "url": "https://css-tips.blackspike.com",
+  "theme_color": "#eee",
+  "footer_links": [
+    {
+      "title": "live demo",
+      "link": "https://astro-theme.blackspike.com/"
+    },
+    {
+      "title": "github",
+      "link": "https://github.com/blackspike/blackspike-astro-landing-page"
+    },
+    {
+      "title": "by blackspike.com",
+      "link": "https://www.blackspike.com/blog/blackspike-free-astro-tailwind-theme/"
+    }
+  ],
+  "social_links": [
+    {
+      "title": "Twitter / X",
+      "link": "https://x.com/blackspikeltd/"
+    },
+    {
+      "title": "Mastodon",
+      "link": "https://mastodon.cloud/@blackspike"
+    },
+    {
+      "title": "GitHub",
+      "link": "https://github.com/blackspike/"
+    },
+    {
+      "title": "LinkedIn",
+      "link": "https://www.linkedin.com/company/blackspike"
+    },
+    {
+      "title": "Bluesky",
+      "link": "https://bsky.app/profile/blackspike.com/"
+    }
+  ]
+}
