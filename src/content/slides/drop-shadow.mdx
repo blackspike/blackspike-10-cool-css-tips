@@ -11,12 +11,12 @@ import VideoPlayer from '../../components/VideoPlayer.astro'
 Add Tailwind’s `transform-gpu` or `translate3d(0,0,0)` to fix Safari's clip bug
 
 <VideoPlayer
-  classes="w-[500px] right-[40px] top-[20px]"
+  classes="w-[640px] right-[-120px] top-[230px] lg:w-[500px] lg:right-[40px] lg:top-[20px]"
   name="drop-shadow"
 />
 
 <Image
   src={screen}
-  alt="code screenshot, see the source code in the github footer link"
-  class="rounded-xl absolute z-1 w-[280px] right-[20px] top-[100px] hover:z-10"
+  alt="code screenshot"
+  class="rounded-xl absolute z-1 hover:z-10 w-[400px] right-[20px] top-[80px] lg:w-[280px] lg:right-[20px] lg:top-[100px]"
 />
