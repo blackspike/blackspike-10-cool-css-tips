@@ -2,8 +2,9 @@
 import Layout from '../layouts/Layout.astro'
 import SlideContent from "../components/SlideContent.astro"
 
-import { getEntry } from 'astro:content'
+import { getEntry, render } from 'astro:content'
 const content = await getEntry('pages', 'index')
+const { Content } = await render(content)
 
 import { Image } from 'astro:assets';
 import screen from '../assets/images/hero-image.png'
@@ -25,6 +26,7 @@ import screen from '../assets/images/hero-image.png'
       style="animation-delay: 1s !important;"
     />
 
+    <Content />
   </Fragment>
 
   </SlideContent>

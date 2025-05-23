@@ -80,7 +80,7 @@ const descNoHtml = stripHTMLTags(description)
     </a>
 
     <!-- Footer -->
-    <footer class="font-semibold text-sm fixed bottom-10 right-10 z-0 flex gap-3 flex-wrap [&_a]:hover:text-sky-500" id="footer">
+    <footer class="opacity-0 group-hover:opacity-100 font-semibold text-sm fixed bottom-10 right-10 z-0 flex gap-3 flex-wrap [&_a]:hover:text-sky-500" id="footer">
 
       { settings.footer_links.map( item => <a href={ item.link }> { item.title } </a> ) }
 
