@@ -1,16 +1,16 @@
 {
-  "title": "blackspike",
+  "title": "blackspike mac apps",
   "description": "A blackspike project",
   "url": "https://css-tips.blackspike.com",
-  "theme_color": "#eee",
+  "theme_color": "#1a1a1a",
   "footer_links": [
     {
-      "title": "live demo",
-      "link": "https://astro-theme.blackspike.com/"
+      "title": "download icon",
+      "link": "https://www.blackspike.com/dropbox/icon.icns"
     },
     {
-      "title": "github",
-      "link": "https://github.com/blackspike/blackspike-astro-landing-page"
+      "title": "download demo app",
+      "link": "https://www.blackspike.com/dropbox/ffmpeg.app"
     },
     {
       "title": "by blackspike.com",

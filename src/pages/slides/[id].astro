@@ -31,4 +31,9 @@ const { Content } = await render(entry)
 
   </SlideContent>
 
+  <!-- Audio -->
+  { entry.data.audio &&
+    <audio src={ entry.data.audio } autoplay />
+  }
+
 </Layout>

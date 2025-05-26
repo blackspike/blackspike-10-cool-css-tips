@@ -10,7 +10,7 @@ import { ClientRouter } from "astro:transitions"
 
 import settings from "../content/meta/settings.json"
 
-import Logo from '../assets/blackspike-logo.svg'
+import Logo from '../assets/images/blackspike-logo.svg'
 import PrevNext from "../components/PrevNext.astro"
 
 const { title, description, image } = Astro.props
@@ -21,7 +21,7 @@ const descNoHtml = stripHTMLTags(description)
 ---
 
 <!doctype html>
-<html lang="en" class="bg-bs-surface-0 relative flex items-center justify-center h-dvh w-full">
+<html lang="en" class="bg-bs-surface-0 bg-bs-surface-1 relative flex items-center justify-center h-dvh w-full">
   <head>
 
     <meta charset="UTF-8" />
@@ -66,7 +66,7 @@ const descNoHtml = stripHTMLTags(description)
     </main>
 
     <!-- Nav -->
-    <div class="absolute bottom-6 right-6 lg:bottom-10 lg:right-10 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-400">
+    <div class="fixed top-6 right-6 lg:bottom-10 lg:right-10 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-400">
 
       <PrevNext />
 

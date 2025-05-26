@@ -6,6 +6,7 @@ const slides = defineCollection({
   schema: z.object({
     title: z.string(),
     image: z.string().optional(),
+    audio: z.string().optional(),
     description: z.string().optional(),
     order: z.number(),
   }),
@@ -16,6 +17,7 @@ const pages = defineCollection({
   schema: z.object({
     title: z.string(),
     image: z.string().optional(),
+    audio: z.string().optional(),
     description: z.string().optional(),
   }),
 })
